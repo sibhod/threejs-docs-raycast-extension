@@ -7,7 +7,12 @@ type Params = FetchJsonParams & {
   toast: Pick<Toast.Options, 'title'> & Partial<Toast.Options>;
 };
 
-export function fetchJsonWithToast<T>({ error, onError, toast: toastOptions, ...params }: Params) {
+export function fetchJsonWithToast<T>({
+  error,
+  onError,
+  toast: toastOptions,
+  ...params
+}: Params) {
   return showToast({
     style: Toast.Style.Animated,
     ...toastOptions,

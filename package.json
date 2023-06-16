@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "three-js-documentation",
-  "title": "Three.js documentation",
-  "description": "Search and display documention for Three.js",
+  "name": "threejs-documentation",
+  "title": "Three.js Documentation Search",
+  "description": "Search and view documention for the Three.js API, with detail pages and links to the official docs and the github source.",
   "icon": "command-icon.png",
   "author": "sibhod",
   "categories": [
@@ -11,9 +11,9 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "index",
-      "title": "Search the Three.js documentation",
-      "description": "Search the Three.js documentation and display reference results in Raycast, open the documentation URL, or open the file in GitHub.",
+      "name": "search",
+      "title": "Three.js Documentation Search",
+      "description": "Search and view documention for the Three.js API, with detail pages and links to the official docs and the github source.",
       "mode": "view"
     }
   ],
@@ -30,63 +30,6 @@
     "prettier": "^2.5.1",
     "typescript": "^4.4.3"
   },
-  "preferences": [
-    {
-      "name": "language",
-      "title": "Language",
-      "description": "The api documentation language.",
-      "type": "dropdown",
-      "default": "en",
-      "required": false,
-      "data": [
-        {
-          "title": "English",
-          "value": "en"
-        },
-        {
-          "title": "Arabic",
-          "value": "ar"
-        },
-        {
-          "title": "French",
-          "value": "fr"
-        },
-        {
-          "title": "Italian",
-          "value": "it"
-        },
-        {
-          "title": "Japanese",
-          "value": "jp"
-        },
-        {
-          "title": "Korean",
-          "value": "ko"
-        },
-        {
-          "title": "Portuguese",
-          "value": "pt-br"
-        },
-        {
-          "title": "Russian",
-          "value": "ru"
-        },
-        {
-          "title": "Chinese (Simplified)",
-          "value": "zh"
-        }
-      ]
-    },
-    {
-      "name": "release",
-      "title": "Release Version",
-      "description": "The release version of the documentation, with fallback to 'latest'.",
-      "default": "latest",
-      "type": "textfield",
-      "required": false,
-      "placeholder": "latest"
-    }
-  ],
   "scripts": {
     "build": "ray build -e dist",
     "dev": "ray develop",
